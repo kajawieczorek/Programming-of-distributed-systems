@@ -1,0 +1,18 @@
+<<<<<<< HEAD
+import java.net.UnknownHostException;
+
+import com.hazelcast.config.Config;
+import com.hazelcast.core.Hazelcast;
+
+public class HInstance {
+
+    public static void main(String[] args) throws UnknownHostException {
+        Config config = HConfig.getConfig();
+		Hazelcast.newHazelcastInstance(config);
+	}
+}
+=======
+version https://git-lfs.github.com/spec/v1
+oid sha256:e2216e5ed39d490564892a2333ef6b3849ce17ae0d517395304059d248c6a8a0
+size 303
+>>>>>>> Add Hazelcast files

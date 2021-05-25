@@ -1,0 +1,22 @@
+<<<<<<< HEAD
+import lombok.*;
+import java.io.Serializable;
+
+@Getter
+@Setter
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
+
+public class Employee implements Serializable {
+	private String name;
+	private String surname;
+	private int birthYear;
+	private double salary;
+}
+=======
+version https://git-lfs.github.com/spec/v1
+oid sha256:d1317210032cfe81c4a6337126949529cebea18770fb22dd1ebedc6f60685d0e
+size 267
+>>>>>>> Add Hazelcast files

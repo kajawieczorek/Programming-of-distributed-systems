@@ -1,0 +1,23 @@
+<<<<<<< HEAD
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="LabHazelcast" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="LabHazelcast" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
+=======
+version https://git-lfs.github.com/spec/v1
+oid sha256:dc987707e14745e749a8b0a515f6f93b728d63afe11bd725439f2f8c771a2f31
+size 699
+>>>>>>> Add Hazelcast files

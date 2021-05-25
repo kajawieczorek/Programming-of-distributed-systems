@@ -1,0 +1,17 @@
+<<<<<<< HEAD
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_16" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
+</project>
+=======
+version https://git-lfs.github.com/spec/v1
+oid sha256:703ec45a2d8f9f7543d5ed60e85b1f9c274f6337283786ac300000186da2f779
+size 379
+>>>>>>> Add Hazelcast files

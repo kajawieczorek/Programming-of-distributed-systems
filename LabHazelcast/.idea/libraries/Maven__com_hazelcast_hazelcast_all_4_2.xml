@@ -1,0 +1,18 @@
+<component name="libraryTable">
+  <library name="Maven: com.hazelcast:hazelcast-all:4.2">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/hazelcast/hazelcast-all/4.2/hazelcast-all-4.2.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/hazelcast/hazelcast-all/4.2/hazelcast-all-4.2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/hazelcast/hazelcast-all/4.2/hazelcast-all-4.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
+=======
+version https://git-lfs.github.com/spec/v1
+oid sha256:508f6af2ba694170c00dbccdccaae81d20f74a0eb4fb4980c62cca245f984555
+size 524
+>>>>>>> Add Hazelcast files

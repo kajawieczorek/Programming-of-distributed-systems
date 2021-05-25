@@ -1,0 +1,19 @@
+<<<<<<< HEAD
+<component name="libraryTable">
+  <library name="Maven: org.projectlombok:lombok:1.18.6">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.6/lombok-1.18.6.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.6/lombok-1.18.6-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.6/lombok-1.18.6-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
+=======
+version https://git-lfs.github.com/spec/v1
+oid sha256:e998d279cdba4a040b7792855cd726dcd24267220e3411539bf6f0cb32b51b66
+size 512
+>>>>>>> Add Hazelcast files
