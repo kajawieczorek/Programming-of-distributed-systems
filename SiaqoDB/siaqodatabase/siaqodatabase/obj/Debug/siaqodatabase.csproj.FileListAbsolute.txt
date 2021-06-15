@@ -1,0 +1,14 @@
+D:\Uczelnia\PSR\dr Bedla\SiaqoDB\siaqodatabase\siaqodatabase\bin\Debug\lmdb32.dll
+D:\Uczelnia\PSR\dr Bedla\SiaqoDB\siaqodatabase\siaqodatabase\bin\Debug\lmdb64.dll
+D:\Uczelnia\PSR\dr Bedla\SiaqoDB\siaqodatabase\siaqodatabase\bin\Debug\siaqodatabase.exe.config
+D:\Uczelnia\PSR\dr Bedla\SiaqoDB\siaqodatabase\siaqodatabase\bin\Debug\siaqodatabase.exe
+D:\Uczelnia\PSR\dr Bedla\SiaqoDB\siaqodatabase\siaqodatabase\bin\Debug\siaqodatabase.pdb
+D:\Uczelnia\PSR\dr Bedla\SiaqoDB\siaqodatabase\siaqodatabase\bin\Debug\Siaqodb.dll
+D:\Uczelnia\PSR\dr Bedla\SiaqoDB\siaqodatabase\siaqodatabase\bin\Debug\SiaqodbPortable.dll
+D:\Uczelnia\PSR\dr Bedla\SiaqoDB\siaqodatabase\siaqodatabase\bin\Debug\Siaqodb.xml
+D:\Uczelnia\PSR\dr Bedla\SiaqoDB\siaqodatabase\siaqodatabase\bin\Debug\SiaqodbPortable.xml
+D:\Uczelnia\PSR\dr Bedla\SiaqoDB\siaqodatabase\siaqodatabase\obj\Debug\siaqodatabase.csprojAssemblyReference.cache
+D:\Uczelnia\PSR\dr Bedla\SiaqoDB\siaqodatabase\siaqodatabase\obj\Debug\siaqodatabase.csproj.CoreCompileInputs.cache
+D:\Uczelnia\PSR\dr Bedla\SiaqoDB\siaqodatabase\siaqodatabase\obj\Debug\siaqodatabase.csproj.CopyComplete
+D:\Uczelnia\PSR\dr Bedla\SiaqoDB\siaqodatabase\siaqodatabase\obj\Debug\siaqodatabase.exe
+D:\Uczelnia\PSR\dr Bedla\SiaqoDB\siaqodatabase\siaqodatabase\obj\Debug\siaqodatabase.pdb
