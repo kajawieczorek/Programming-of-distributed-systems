@@ -10,80 +10,41 @@ namespace siaqodatabase
     public class DataHandler
     {
 
-        public void PrintAllClientData(IObjectList<Client> clients)
+        public void PrintAllClientData(IObjectList<Doctor> doctors)
         {
-            foreach (Client c in clients)
+            foreach (Doctor doc in doctors)
             {
-                Console.WriteLine($"Imię i nazwisko: {c.Name} {c.Surname} \n" +
-                                  $"ID: {c.OID}, rok urodzenia: {c.BirthYear}");
+                Console.WriteLine($"Imię i nazwisko: {doc.Name} {doc.Surname} \n" +
+                                  $"ID: {doc.OID}, rok urodzenia: {doc.BirthYear} " +
+                                  $"Pensja: {doc.Salary}, Miasto: {doc.City}");
 
-                if (c.Trips != null)
-                {
-                    Console.WriteLine("Wycieczki:");
-                    foreach (Trip trip in c.Trips)
-                    {
-                        Console.WriteLine($"    ID: {trip.OID}");
-                        Console.WriteLine($"    Kraj: {trip.Country} \tMiasto: {trip.City}\n" +
-                                          $"    Ilość dni: {trip.Days} \tCena:{trip.Price}");
-                    }
-                }
             }
         }
-        public void PrintAllClientData(ISqoQuery<Client> clients)
+        public void PrintAllClientData(ISqoQuery<Doctor> doctors)
         {
-            foreach (Client c in clients)
+            foreach (Doctor doc in doctors)
             {
-                Console.WriteLine($"Imię i nazwisko: {c.Name} {c.Surname} \n" +
-                                  $"ID: {c.OID}, rok urodzenia: {c.BirthYear}");
-
-                if (c.Trips != null)
-                {
-                    Console.WriteLine("Wycieczki:");
-                    foreach (Trip trip in c.Trips)
-                    {
-                        Console.WriteLine($"    ID {trip.OID}:");
-                        Console.WriteLine($"    {trip.Country} {trip.City}\n" +
-                                          $"    {trip.Days} {trip.Price}");
-                    }
-                }
+                Console.WriteLine($"Imię i nazwisko: {doc.Name} {doc.Surname} \n" +
+                                  $"ID: {doc.OID}, rok urodzenia: {doc.BirthYear} " +
+                                  $"Pensja: {doc.Salary}, Miasto: {doc.City}");
             }
         }
-        public void PrintAllClientData(Client c)
+        public void PrintAllClientData(Doctor doc)
         {
 
-            Console.WriteLine($"Imię i nazwisko: {c.Name} {c.Surname} \n" +
-                              $"ID: {c.OID}, rok urodzenia: {c.BirthYear}");
-
-            if (c.Trips != null)
-            {
-                Console.WriteLine("Wycieczki:");
-                foreach (Trip trip in c.Trips)
-                {
-                    Console.WriteLine($"    ID: {trip.OID}");
-                    Console.WriteLine($"    Kraj: {trip.Country} \tMiasto: {trip.City}\n" +
-                                      $"    Ilość dni: {trip.Days} \tCena:{trip.Price}");
-                }
-            }
+            Console.WriteLine($"Imię i nazwisko: {doc.Name} {doc.Surname} \n" +
+                                  $"ID: {doc.OID}, rok urodzenia: {doc.BirthYear} " +
+                                  $"Pensja: {doc.Salary}, Miasto: {doc.City}");
 
         }
 
-        public void PrintAllClientData(IEnumerable<Client> clients)
+        public void PrintAllClientData(IEnumerable<Doctor> doctors)
         {
-
-            foreach (Client c in clients)
+            foreach (Doctor doc in doctors)
             {
-                Console.WriteLine($"Imię i nazwisko: {c.Name} {c.Surname} \n" +
-                              $"ID: {c.OID}, rok urodzenia: {c.BirthYear}");
-                if (c.Trips != null)
-                {
-                    Console.WriteLine("Wycieczki:");
-                    foreach (Trip trip in c.Trips)
-                    {
-                        Console.WriteLine($"    ID: {trip.OID}");
-                        Console.WriteLine($"    Kraj: {trip.Country} \tMiasto: {trip.City}\n" +
-                                          $"    Ilość dni: {trip.Days} \tCena:{trip.Price}");
-                    }
-                }
+                Console.WriteLine($"Imię i nazwisko: {doc.Name} {doc.Surname} \n" +
+                                  $"ID: {doc.OID}, rok urodzenia: {doc.BirthYear} " +
+                                  $"Pensja: {doc.Salary}, Miasto: {doc.City}");
             }
         }
     }

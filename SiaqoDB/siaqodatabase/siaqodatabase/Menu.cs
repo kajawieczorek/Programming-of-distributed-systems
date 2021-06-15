@@ -33,11 +33,11 @@ namespace siaqodatabase
                         Console.ReadLine();
                         break;
                     case 3:
-                        AddClient();
+                        AddDoctor();
                         Console.ReadLine();
                         break;
                     case 4:
-                        UpdateClient();
+                        UpdateDoctor();
                         Console.ReadLine();
                         break;
                     case 5:
@@ -45,18 +45,14 @@ namespace siaqodatabase
                         Console.ReadLine();
                         break;
                     case 6:
-                        ClientWithMoreThanOneTrip();
+                        DoctorwithMoreThanTwoPatirnts();
                         Console.ReadLine();
                         break;
                     case 7:
-                        AvarageTripCost();
+                        AvarageSalary();
                         Console.ReadLine();
                         break;
                     case 8:
-                        AddTripToClient();
-                        Console.ReadLine();
-                        break;
-                    case 9:
                         return;
                     default:
                         break;
@@ -64,43 +60,18 @@ namespace siaqodatabase
             }
         }
 
-        private void UpdateClient()
+        private void UpdateDoctor()
         {
-            Console.WriteLine("Podaj id klienta: ");
+            Console.WriteLine("Podaj id doktora: ");
             var id = Int32.Parse(Console.ReadLine());
-            var person = db.LoadAll<Client>().Where(x => x.OID == id).First();
-            Console.WriteLine("Podaj nowy rok urodzenia:");
-            var year = Int32.Parse(Console.ReadLine());
-            person.BirthYear = year;
-            db.StoreObject(person);
-        }
-
-        private void AddTripToClient()
-        {
-            Console.WriteLine("Podaj id klienta: ");
-            var id = Int32.Parse(Console.ReadLine());
-
-            var person = db.LoadAll<Client>().Where(x => x.OID == id).FirstOrDefault();
-
-            Console.WriteLine("Kraj: ");
-            var country = Console.ReadLine();
-            Console.WriteLine("Miasto: ");
+            var doc = db.LoadAll<Doctor>().Where(x => x.OID == id).First();
+            Console.WriteLine("Podaj nowe miasto pracy:");
             var city = Console.ReadLine();
-            Console.WriteLine("Ilość dni: ");
-            var days = Int32.Parse(Console.ReadLine());
-            Console.WriteLine("Cena: ");
-            var price = Convert.ToDouble(Console.ReadLine());
-
-            var trip = new Trip() { Country = country, City = city, Days = days, Price = price };
-            if (person.Trips == null)
-                person.Trips = new List<Trip>() { trip };
-            else
-                person.Trips.Add(trip);
-            db.StoreObject(person);
-            Console.WriteLine("Dodano!");
+            doc.City = city;
+            db.StoreObject(doc);
         }
 
-        private void AddClient()
+        private void AddDoctor()
         {
             Console.WriteLine("Imię: ");
             var name = Console.ReadLine();
@@ -108,52 +79,51 @@ namespace siaqodatabase
             var surname = Console.ReadLine();
             Console.WriteLine("Rok urodzenia: ");
             var year = Int32.Parse(Console.ReadLine());
+            Console.WriteLine("Miasto: ");
+            var city = Console.ReadLine();
+            Console.WriteLine("Pensja: ");
+            var salary = Int32.Parse(Console.ReadLine());
 
-            var client = new Client() { Name = name, Surname = surname, BirthYear = year };
+            var client = new Doctor() { Name = name, Surname = surname, BirthYear = year, Salary = salary, City = city };
             db.StoreObject(client);
-            Console.WriteLine($"ID dodanego klienta: {client.OID}");
+            Console.WriteLine($"ID dodanego lekarza: {client.OID}");
             Console.WriteLine("Dodano!");
         }
 
-        private void AvarageTripCost()
+        private void AvarageSalary()
         {
-            var q = db.LoadAll<Client>().Select(x => x.Trips);
+            var q = db.LoadAll<Doctor>().Select(x => x.Salary);
             var counter = 0;
             double sum = 0;
-            foreach(var trips in q)
+            foreach(var salary in q)
             {
-                foreach (var trip in trips)
-                {
-                    sum += trip.Price;
-                    counter++;
-                }
+                sum += salary;
+                counter++;
             }
-            Console.WriteLine($"Średnia cena sprzedanych wycieczek wynosi: {sum / counter}.");
+            Console.WriteLine($"Średnia pensja wynosi: {sum / counter}.");
         }
 
         private void PrintAllData()
         {
-            var q = db.LoadAll<Client>();
+            var q = db.LoadAll<Doctor>();
             handler.PrintAllClientData(q);
         }
         public void PrintMenu()
         {
             Console.WriteLine("[1] - Pobierz przez id\n" +
                               "[2] - Pobierz wszystko\n" +
-                              "[3] - Dodaj klienta\n" +
+                              "[3] - Dodaj lekarza\n" +
                               "[4] - Aktualizuj\n" +
                               "[5] - Kasuj\n" +
-                              "[6] - Wyświetl klientów z więcej niż jedną wycieczką\n" +
-                              "[7] - Policz średnią cenę sprzedanych wycieczek\n" +
-                              "[8] - Dodaj wycieczkę do klienta\n" +
-                              "[9] - Zakończ");
+                              "[6] - Wyświetl doktorów z Kielc\n" +
+                              "[7] - Policz średnią pensję\n" +
+                              "[8] - Zakończ");
         }
-
         public void GetById()
         {
             Console.WriteLine("Podaj id: ");
             var id = Convert.ToInt32(Console.ReadLine());
-            var q = db.LoadAll<Client>().Where(x => x.OID == id).FirstOrDefault();
+            var q = db.LoadAll<Doctor>().Where(x => x.OID == id).FirstOrDefault();
             handler.PrintAllClientData(q);
         }
 
@@ -162,15 +132,15 @@ namespace siaqodatabase
         {
             Console.WriteLine("Podaj id: ");
             var id = Convert.ToInt32(Console.ReadLine());
-            var q = db.LoadAll<Client>().Where(x => x.OID == id).FirstOrDefault();
+            var q = db.LoadAll<Doctor>().Where(x => x.OID == id).FirstOrDefault();
             db.Delete(q);
             Console.WriteLine("Usunięto!");
         }
 
-        private void ClientWithMoreThanOneTrip()
+        private void DoctorwithMoreThanTwoPatirnts()
         {
-            var moreThanOne = db.LoadAll<Client>().Where(x => x.Trips.Count() > 1);
-            handler.PrintAllClientData(moreThanOne);
+            var q = db.LoadAll<Doctor>().Where(x => x.City == "Kielce");
+            handler.PrintAllClientData(q);
         }
     }
 }
